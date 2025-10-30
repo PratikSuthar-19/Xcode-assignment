@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { createMedia, updateMedia , uploadToCloudinary } from "@/api/media"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 interface MediaFormProps {
   mode?: "create" | "edit"

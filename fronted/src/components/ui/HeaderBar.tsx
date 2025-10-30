@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const HeaderBar: React.FC = () => {
   const navigate = useNavigate();
@@ -20,13 +20,13 @@ const HeaderBar: React.FC = () => {
                  flex items-center justify-between px-9 py-6
                  text-white transition-all duration-300 "
     >
-      {/* Left: Welcome message */}
+   
       <h1 className="text-lg md:text-xl font-semibold tracking-wide">
         Welcome to{" "}
         <span className="text-orange-400 font-bold">Xcode Technologies</span>
       </h1>
 
-      {/* Right: Auth button */}
+    
       <div className="flex items-center gap-4" > 
          {isLoggedIn && (
           <button

@@ -1,4 +1,4 @@
-import { BrowserRouter , Routes, Route  , Navigate , useNavigate} from "react-router-dom";
+import { Routes, Route  , Navigate } from "react-router-dom";
 import Layout from "./components/ui/Layout";
 import Login from "@/pages/Login"
 import Signup from "@/pages/Signup"
@@ -7,7 +7,6 @@ import EditMedia from "./pages/EditMedia"
 import MediaList from "./pages/MediaList"
 
 export default function App() {
-  const navigate = useNavigate()
 
   return (
   

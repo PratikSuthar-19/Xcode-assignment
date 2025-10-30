@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { deleteMedia, getMedia } from "@/api/media";
 import ImageModal from "./ImageModal";
-import { Button}  from "./button"; 
 import { Input } from "./input";
 import ConfirmDialog from "@/components/ui/ConfirmDialog";
 import { searchMediaApi } from "@/api/media";
@@ -364,7 +363,7 @@ const confirmDelete = async () => {
           </div> 
 
          
-                                <div className="flex gap-3.5">
+                      <div className="flex gap-3.5">
                       <a
                        href={`/media/edit/${mobileDetails.id}`}
                        className="text-sm px-3 py-1 rounded-md border border-gray-700 hover:bg-gray-800"
@@ -378,7 +377,6 @@ const confirmDelete = async () => {
                       Delete
                     </button>
 
-                      {/* Other actions */}
                     </div>
 
         </div>

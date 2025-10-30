@@ -200,13 +200,6 @@ const confirmDelete = async () => {
                   <td className="px-4 py-3 text-sm text-gray-400">{m.yearOrTime ?? "-"}</td>
                   <td className="px-4 py-3 text-sm text-gray-400">
                     <div className="flex gap-2">
-                      {/* <a
-                        href={`/media/edit/${m.id}`}
-                        className="text-sm px-3 py-1 rounded-md border border-gray-700 hover:bg-gray-800"
-                      >
-                        Edit
-                      </a> */}
-
                       <a
                        href={`/media/edit/${m.id}`}
                        className="text-sm px-3 py-1 rounded-md border border-gray-700 hover:bg-gray-800"
@@ -351,15 +344,43 @@ const confirmDelete = async () => {
               <span className="text-gray-400 block text-xs">Year/Time</span>
               <span className="text-gray-200">{mobileDetails.yearOrTime}</span>
             </div>
-          </div>
 
-          {/* Description */}
+
+          {/* Description
           <div className="bg-neutral-800/60 rounded-lg p-3 border border-gray-700 mt-3">
             <span className="text-gray-400 block text-xs mb-1">Description</span>
             <p className="text-gray-200 text-sm leading-relaxed">
               {mobileDetails.description || "No description provided."}
             </p>
+          </div> */}
+
           </div>
+           {/* Description */}
+          <div className="bg-neutral-800/60 rounded-lg p-3 border border-gray-700 mt-3">
+            <span className="text-gray-400 block text-xs mb-1">Description</span>
+            <p className="text-gray-200 text-sm leading-relaxed">
+              {mobileDetails.description || "No description provided."}
+            </p>
+          </div> 
+
+         
+                                <div className="flex gap-3.5">
+                      <a
+                       href={`/media/edit/${mobileDetails.id}`}
+                       className="text-sm px-3 py-1 rounded-md border border-gray-700 hover:bg-gray-800"
+                      >
+                       Edit
+                     </a>
+                     <button
+                      onClick={() => handleDeleteClick(mobileDetails)}
+                      className="text-sm px-3 py-1 rounded-md border border-red-700 text-red-400 hover:bg-red-900/30"
+                     >
+                      Delete
+                    </button>
+
+                      {/* Other actions */}
+                    </div>
+
         </div>
       </div>
     </div>

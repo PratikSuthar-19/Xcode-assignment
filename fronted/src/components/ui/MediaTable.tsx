@@ -43,7 +43,9 @@ export default function MediaTable({ initialQuery = "", pageSize = 10 }: Props) 
 
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
-  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const debounceRef = useRef<number | undefined>(undefined);
+
 
   useEffect(() => {
     setItems([]);
@@ -145,8 +147,6 @@ const confirmDelete = async () => {
   }
 }
 
-  // responsive detection
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   const displayedItems = search.trim() ? searchResults : items;
 

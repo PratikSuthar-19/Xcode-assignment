@@ -33,7 +33,7 @@ export default function AuthForm({ type }: AuthFormProps) {
     setMessage("")
     try {
       if (type === "signup") {
-        const res = await signup(formData)
+         await signup(formData)
         setMessage("Signup successful!")
         setTimeout(() => navigate("/login"), 1000)
       } else {
